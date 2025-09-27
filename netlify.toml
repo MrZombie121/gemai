@@ -1,0 +1,27 @@
+# Netlify Build Settings
+# This section tells Netlify where your site's files are and where the backend functions live.
+[build]
+  command = "npm run build"
+  publish = "dist"
+
+
+# Netlify Functions Configuration
+# This ensures your backend code runs in a modern, stable environment.
+[functions]
+  # Use esbuild, a fast and modern bundler for your TypeScript functions.
+  node_bundler = "esbuild"
+  # Explicitly set the Node.js version to a stable LTS release (v20).
+  # This is critical for preventing "internal errors" caused by environment mismatches.
+  nodejs_version = "20"
+
+# API Routing Rules (Redirects)
+# This rule is the key to connecting your frontend to your backend.
+# It tells Netlify to treat any request to "/api/..." as a call to a serverless function.
+[[redirects]]
+  # Match any URL that starts with /api/
+  from = "/api/*"
+  # Internally forward it to the corresponding Netlify function.
+  # For example, /api/gemini-proxy will be sent to the gemini-proxy function.
+  to = "/.netlify/functions/:splat"
+  # A 200 status code makes this a "rewrite," which is like a silent proxy.
+  status = 200

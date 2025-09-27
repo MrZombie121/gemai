@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>GemAI Chat</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <style>
+    :root {
+      --bg-primary: #0D1B2A;
+      --bg-secondary: #1B263B;
+      --bg-tertiary: #2a354a;
+      --border-color: #415A77;
+      --text-primary: #E0E1DD;
+      --text-secondary: #a7aebb;
+      --accent-cyan: #00F5D4;
+      --accent-magenta: #FF007F;
+      --accent-blue: #3A86FF;
+      --font-sans: 'Inter', sans-serif;
+    }
+
+    body {
+      background-color: var(--bg-primary);
+      font-family: var(--font-sans);
+    }
+
+    /* Custom scrollbar for a more modern look */
+    ::-webkit-scrollbar {
+      width: 8px;
+    }
+    ::-webkit-scrollbar-track {
+      background: var(--bg-secondary);
+    }
+    ::-webkit-scrollbar-thumb {
+      background: var(--border-color);
+      border-radius: 4px;
+    }
+    ::-webkit-scrollbar-thumb:hover {
+      background: #5a7a9c;
+    }
+  </style>
+<script type="importmap">
+{
+  "imports": {
+    "react-dom/": "https://aistudiocdn.com/react-dom@^19.1.1/",
+    "react/": "https://aistudiocdn.com/react@^19.1.1/",
+    "react": "https://aistudiocdn.com/react@^19.1.1",
+    "@google/genai": "https://aistudiocdn.com/@google/genai@0.14.0",
+    "stream": "https://aistudiocdn.com/stream@^0.0.3",
+    "@netlify/functions": "https://aistudiocdn.com/@netlify/functions@^4.2.6"
+  }
+}
+</script>
+<link rel="stylesheet" href="/index.css">
+</head>
+<body>
+  <div id="root"></div>
+  <script type="module" src="index.tsx"></script>
+<script type="module" src="/index.tsx"></script>
+</body>
+</html>

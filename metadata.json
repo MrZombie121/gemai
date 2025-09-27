@@ -1,0 +1,8 @@
+{
+  "name": "GemAI Chat",
+  "description": "An advanced chat application powered by Google's Gemini API. Features include persistent user accounts, multi-chat management, a gamified 'GemCoin' currency system with a store for plan upgrades, and a sleek, modern user interface.",
+  "requestFramePermissions": [
+    "camera",
+    "microphone"
+  ]
+}

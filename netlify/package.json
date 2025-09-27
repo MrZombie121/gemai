@@ -1,0 +1,8 @@
+{
+  "name": "gemai-netlify-functions",
+  "version": "1.0.0",
+  "dependencies": {
+    "@google/genai": "0.14.0",
+    "@netlify/functions": "^2.8.1"
+  }
+}
